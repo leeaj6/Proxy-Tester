@@ -21,7 +21,7 @@ except:
 
 # Test if proxies are available
 if len(proxy_list_main):
-	proxy_list_main = ProxyTester(proxy_list_main, sys.argv[1], sys.argv[2]).testAll()
+	proxy_list_main = ProxyTester(proxy_list_main, sys.argv[1], int(sys.argv[2])).testAll()
 	open("good-proxies.out", "w").write('\n'.join(proxy_list_main))
 else:
 	print("No proxies found")
